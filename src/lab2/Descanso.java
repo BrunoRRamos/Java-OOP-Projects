@@ -2,24 +2,23 @@ package lab2;
 
 public class Descanso {
     private int numeroDeSemanas;
-    private int NumeroDeHoras;
+    private int numeroDeHoras;
+    private String statusAluno = "cansado";
 
     public void defineNumeroSemanas(int numeroDeSemanas) {
         this.numeroDeSemanas = numeroDeSemanas;
     }
 
     public void defineHorasDescanso(int getNumeroDeHoras) {
-        this.NumeroDeHoras = getNumeroDeHoras;
+        this.numeroDeHoras = getNumeroDeHoras;
     }
 
     public String getStatusGeral() {
-        try {
-            if ((NumeroDeHoras / numeroDeSemanas) < 26) {
-                return "cansado";
-            }
-        } catch (Exception e) {
-            return "cansado";
+        if (numeroDeSemanas >= 1 && (numeroDeHoras / numeroDeSemanas) >= 26) {
+            this.statusAluno = "descansado";
+        } else {
+            this.statusAluno = "cansado";
         }
-        return "descansado";
+        return statusAluno;
     }
 }
