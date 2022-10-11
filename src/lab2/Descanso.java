@@ -2,7 +2,7 @@ package lab2;
 
 /**
  * Gerencia as horas de descanso, realizando a media de descanso por semana; Verifica se há semanas cadastras
- e se há horas cadastradas.
+ * e se há horas cadastradas.
  * <p>
  *
  * @author Bruno Rodrigues Ramos
