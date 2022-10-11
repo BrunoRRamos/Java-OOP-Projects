@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 /**
  * Registra o nome e as notas de determinada disciplina,
- * além de calcular sua media e retornar a situação do aluno ("aprovado", "reprovado") e as respectivas notas.
+ * além de calcular sua media e retornar a situação do aluno ("aprovado", "reprovado").
  *<p>
  *
  * @author Bruno Rodrigues Ramos
