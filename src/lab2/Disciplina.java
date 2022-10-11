@@ -29,7 +29,6 @@ public class Disciplina {
         return mediaDisciplina >= 7;
     }
 
-
     public String toString() {
         for (double nota : notas) {
             somaNotas += nota;
