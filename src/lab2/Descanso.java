@@ -30,7 +30,6 @@ public class Descanso {
     public void defineNumeroSemanas(int numeroDeSemanas) {
         this.numeroDeSemanas = numeroDeSemanas;
     }
-
     /**
      * Recebe um valor int como argumento e o atribui ao atributo numeroDeHoras da classe Descanso.
      * <p>
