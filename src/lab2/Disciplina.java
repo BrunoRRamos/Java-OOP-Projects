@@ -38,7 +38,7 @@ public class Disciplina {
         this.nomeDisciplina = newNomeDisciplina;
     }
     /**
-     *Recebe um valor do tipo int a ser acumulado no atributo horasDisciplina
+     *Recebe um valor do tipo int a ser acumulado no atributo horasDisciplina.
      * @param horas
      */
     public void cadastraHoras(int horas) {
