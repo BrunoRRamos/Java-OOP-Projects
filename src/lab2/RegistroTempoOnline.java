@@ -1,6 +1,6 @@
 package lab2;
 /**
- * Recebe a nome, as horas esperadas e as horas utilizadas para determinada disciplina,
+ * Recebe o nome, as horas esperadas e as horas utilizadas para determinada disciplina,
  * verifica se as horas esperadas foram atingidas, adiciona tempo online e retorna a relação,
  * horas utilizadas / horas esperadas.
  * <p>
