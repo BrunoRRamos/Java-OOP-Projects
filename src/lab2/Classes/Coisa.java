@@ -1,4 +1,4 @@
-package lab2;
+package lab2.Classes;
 /**
  * Laboratório de Programação 2 - Lab 2
  *

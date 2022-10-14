@@ -1,4 +1,4 @@
-package lab2;
+package lab2.Classes;
 
 /**
  * Gerencia as horas de descanso, realizando a media de descanso por semana; Verifica se há semanas cadastras

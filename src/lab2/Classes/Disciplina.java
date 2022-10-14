@@ -1,8 +1,8 @@
-package lab2;
+package lab2.Classes;
 import java.util.Arrays;
 
 /**
- * Registra o nome e as notas de determinada disciplina,
+ * Gerencia o nome e as notas de determinada disciplina,
  * além de calcular sua media e retornar a situação do aluno ("aprovado", "reprovado").
  *<p>
  *

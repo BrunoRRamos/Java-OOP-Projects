@@ -1,8 +1,8 @@
-package lab2;
+package lab2.Classes;
 import java.util.Arrays;
 
 /**
- * Registra os resumos, contabiliza o número total de resumos cadastrados, verifica se há resumios de determiando tema,
+ * Gerencia os resumos, contabiliza o número total de resumos cadastrados, verifica se há resumios de determiando tema,
  * retorna os resumos cadastrados.
  *<p>
  *
