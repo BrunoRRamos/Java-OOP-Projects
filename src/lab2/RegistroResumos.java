@@ -20,7 +20,6 @@ public class RegistroResumos {
         resumos[contaResumosAtivos] = (tema + ": " + resumo);
         contaResumosAtivos++;
     }
-
     public String[] pegaResumos() {
         return resumos;
     }

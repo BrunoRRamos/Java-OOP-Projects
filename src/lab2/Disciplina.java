@@ -45,9 +45,7 @@ public class Disciplina {
         this.notas[nota - 1] = valorNota;
     }
     /**
-     *Calcula a soma das notas, a média das notas da disciplina e retorna um boleano referente se o aluno foi aprovado ou não.
-     * <p>
-     *Atribui 0 ao atributo "somaNotas" no fim da execução a fim de possibilitar a mudança da média caso alguma nota mude.
+     *Verifica se a média do aluno é maior ou igual a 7.
      * @return boolean mediaDisciplina >= 7
      */
     public boolean aprovado() {
@@ -67,10 +65,7 @@ public class Disciplina {
         return media;
     }
     /**
-     * Calcula a soma das notas da disciplina, a média da disciplina e retorna uma String com o nome da disciplina,
-     * horas utilizadas na disciplina, média na disciplina e o array das notas.
-     * <p>
-     * Atribui 0 ao atributo "somaNotas" no fim da execução a fim de possibilitar a mudança da média caso alguma nota mude.
+     * Retorna em forma de stringa o nome da disciplina, as horas utilizadas, média e as notas da disciplina.
      * @return String (nomeDisciplina, horasDisciplina, mediaDisciplina, notas)
      */
     public String toString() {
