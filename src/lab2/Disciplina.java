@@ -22,14 +22,6 @@ public class Disciplina {
      */
     private int horasDisciplina;
     /**
-     * Acumula a soma de todas as notas da disciplina.
-     */
-    private double somaNotas = 0;
-    /**
-     * Recebe a média da disciplina.
-     */
-    private double mediaDisciplina;
-    /**
      * Construtor que recebe como parâmetro uma String que representa o nome da disciplina.
      * Atrubui o parâmetro ao atrubuto nomeDisciplina
      * @param newNomeDisciplina
@@ -59,12 +51,20 @@ public class Disciplina {
      * @return boolean mediaDisciplina >= 7
      */
     public boolean aprovado() {
+        return calculaMedia() >= 7;
+    }
+    /**
+     * Calcula a média da disciplina.
+     * @return mediaDaDisciplina
+     */
+    public double calculaMedia() {
+        int somaNotas = 0;
+        double media;
         for (double nota : notas) {
             somaNotas += nota;
         }
-        mediaDisciplina = somaNotas / notas.length;
-        somaNotas = 0;
-        return mediaDisciplina >= 7;
+        media = somaNotas / notas.length;
+        return media;
     }
     /**
      * Calcula a soma das notas da disciplina, a média da disciplina e retorna uma String com o nome da disciplina,
@@ -74,11 +74,6 @@ public class Disciplina {
      * @return String (nomeDisciplina, horasDisciplina, mediaDisciplina, notas)
      */
     public String toString() {
-        for (double nota : notas) {
-            somaNotas += nota;
-        }
-        mediaDisciplina = somaNotas / notas.length;
-        somaNotas = 0;
-        return this.nomeDisciplina + " " + this.horasDisciplina + " " + this.mediaDisciplina + " " + Arrays.toString(notas);
+        return this.nomeDisciplina + " " + this.horasDisciplina + " " + calculaMedia() + " " + Arrays.toString(notas);
     }
 }
