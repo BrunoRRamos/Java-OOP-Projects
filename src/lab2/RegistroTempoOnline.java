@@ -20,7 +20,6 @@ public class RegistroTempoOnline {
      * Recebe um int que representa horas utilizadas na disciplina, sendo acumuladas na variável.
      */
     private int tempoUtilizado;
-
     /**
      * Construtor que recebe apenas o nome da disciplina e atrubui o valor padrão int 120 a variável tempoOnlineEsperado.
      * @param nomeDisciplina

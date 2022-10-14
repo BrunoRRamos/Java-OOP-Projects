@@ -1,5 +1,7 @@
 package lab2;
 
+import java.util.Arrays;
+
 public class RegistroResumos {
     private int numeroMaxDeResumos;
     private String[] resumos;
@@ -23,11 +25,16 @@ public class RegistroResumos {
     public String[] pegaResumos() {
         return resumos;
     }
-
+    public String numeroDeResumos() {
+        return "- " + contaResumosAtivos + " resumo(s) cadastrado(s)"+ "\n" + "- ";
+    }
+    /**
+     *
+     * @return
+     */
     public String imprimeResumos() {
-        System.out.println("- " + contaResumosAtivos + " resumo(s) cadastrado(s)");
         String stringTemas = "";
-        stringTemas += "- ";
+        stringTemas += numeroDeResumos();
 
         for (int i = 0; i < contaResumosAtivos - 1; i++) {
             if (i <= contaResumosAtivos) {
@@ -37,17 +44,11 @@ public class RegistroResumos {
         stringTemas += temasResumos[contaResumosAtivos - 1];
         return stringTemas;
     }
-
     public int conta() {
         return contaResumosAtivos;
     }
 
     public boolean temResumo(String tema) {
-        for (int i = 0; i < contaResumosAtivos; i++) {
-            if (temasResumos[i].equals(tema)) {
-                return true;
-            }
-        }
-        return false;
+        return Arrays.asList(temasResumos).contains(tema);
     }
 }
