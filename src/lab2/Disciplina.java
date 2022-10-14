@@ -29,6 +29,7 @@ public class Disciplina {
     public Disciplina(String newNomeDisciplina) {
         this.nomeDisciplina = newNomeDisciplina;
     }
+
     /**
      *Recebe um valor do tipo int a ser acumulado no atributo horasDisciplina.
      * @param horas
@@ -36,6 +37,7 @@ public class Disciplina {
     public void cadastraHoras(int horas) {
         this.horasDisciplina += horas;
     }
+
     /**
      * Recebe uma nota da disciplina e a aloca na devida posição do array "notas".
      * @param nota
@@ -44,6 +46,7 @@ public class Disciplina {
     public void cadastraNota(int nota, double valorNota) {
         this.notas[nota - 1] = valorNota;
     }
+
     /**
      *Verifica se a média do aluno é maior ou igual a 7.
      * @return boolean mediaDisciplina >= 7
@@ -51,6 +54,7 @@ public class Disciplina {
     public boolean aprovado() {
         return calculaMedia() >= 7;
     }
+
     /**
      * Calcula a média da disciplina.
      * @return mediaDaDisciplina
@@ -64,6 +68,7 @@ public class Disciplina {
         media = somaNotas / notas.length;
         return media;
     }
+
     /**
      * Retorna em forma de stringa o nome da disciplina, as horas utilizadas, média e as notas da disciplina.
      * @return String (nomeDisciplina, horasDisciplina, mediaDisciplina, notas)

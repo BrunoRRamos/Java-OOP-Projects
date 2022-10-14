@@ -21,6 +21,7 @@ public class Descanso {
      * médodo getStatusGeral.
      */
     private String statusAluno = "cansado";
+
     /**
      * Recebe um valor int como argumento e o atribui ao atributo numeroSemanas da classe Descanso.
      * <p>
@@ -30,6 +31,7 @@ public class Descanso {
     public void defineNumeroSemanas(int numeroDeSemanas) {
         this.numeroDeSemanas = numeroDeSemanas;
     }
+
     /**
      * Recebe um valor int como argumento e o atribui ao atributo numeroDeHoras da classe Descanso.
      * <p>
@@ -39,6 +41,7 @@ public class Descanso {
     public void defineHorasDescanso(int NumeroDeHoras) {
         this.numeroDeHoras = NumeroDeHoras;
     }
+
     /**
      * Calcula a média de horas descansadas por semana e se a média de horas for inferior a 26,
      * retorna "cansado", caso o contrário retorna "descansado".

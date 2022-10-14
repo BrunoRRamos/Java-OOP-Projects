@@ -28,6 +28,7 @@ public class RegistroTempoOnline {
         this.nomeDisciplina = nomeDisciplina;
         this.tempoOnlineEsperado = 120;
     }
+
     /**
      * Construtor que recebe o nome da disciplina e o número de horas esperadas para a mesma.
      * @param nomeDisciplina
@@ -37,6 +38,7 @@ public class RegistroTempoOnline {
         this.nomeDisciplina = nomeDisciplina;
         this.tempoOnlineEsperado = tempoOnlineEsperado;
     }
+
     /**
      * Recebe um int que representa horas utilizadas na disciplina e acumula esse valor ao acumulador tempoUtilizado.
      * @param tempo
@@ -44,6 +46,7 @@ public class RegistroTempoOnline {
     public void adicionaTempoOnline(int tempo) {
         this.tempoUtilizado += tempo;
     }
+
     /**
      * Verifica se o número de horas utilizadas na disciplina é maior ou igual ao número de horas esperadas.
      * @return boolean (tempoUtilizado >= tempoOnlineEsperado)
@@ -51,6 +54,7 @@ public class RegistroTempoOnline {
     public boolean atingiuMetaTempoOnline() {
         return tempoUtilizado >= tempoOnlineEsperado;
     }
+
     /**
      * Retorna uma String com o nome da disciplina e a relação de horas utilizadas / horas esperadas
      * @return String (nomeDaDisciplina tempoUtilizado / tempoOnlineEsperado)
