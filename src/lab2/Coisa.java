@@ -1,4 +1,9 @@
 package lab2;
+/**
+ * Laboratório de Programação 2 - Lab 2
+ *
+ * @author Bruno Rodrigues Ramos - 121210396
+ */
 
 public class Coisa {
     public static void main(String[] args) {

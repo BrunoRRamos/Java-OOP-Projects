@@ -1,7 +1,13 @@
 package lab2;
-
 import java.util.Arrays;
 
+/**
+ * Registra os resumos, contabiliza o número total de resumos cadastrados, verifica se há resumios de determiando tema,
+ * retorna os resumos cadastrados.
+ *<p>
+ *
+ * @author Bruno
+ */
 public class RegistroResumos {
     private int numeroMaxDeResumos;
     private String[] resumos;
