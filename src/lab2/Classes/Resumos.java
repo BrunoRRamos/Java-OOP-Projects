@@ -1,7 +1,7 @@
 package lab2.Classes;
 
 /**
- * Armazena os resumos cadastrados pela classe RegistroResumos
+ * Armazena os resumos cadastrados pela classe RegistroResumos.
  * <p>
  * @author Bruno Rodrigues Ramos
  */
