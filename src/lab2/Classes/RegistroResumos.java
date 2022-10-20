@@ -1,97 +1,46 @@
 package lab2.Classes;
+
 import java.util.Arrays;
 
-/**
- * Gerencia os resumos, contabiliza o número total de resumos cadastrados, verifica se há resumios de determiando tema,
- * retorna os resumos cadastrados.
- *<p>
- *
- * @author Bruno
- */
 public class RegistroResumos {
-    private int numeroMaxDeResumos;
-    private String[] resumos;
-    private String[] temasResumos;
-    private int contaResumosAtivos = 0;
-    private int auxiliaContaResumos = 0;
+    private int numResumosCadastrados;
+    private final int numeroMaxDeResumos;
+    private int posicaoUltimoResumo;
+    private Resumos resumos;
 
-    /**
-     * Construtor recebe o número máximo de resumo e cria os arrays (do número máximo de resumos) que correspondem ao tema e ao conteúdo do resumo.
-     * @param numeroDeResumos
-     */
-    public RegistroResumos(int numeroDeResumos) {
-        this.numeroMaxDeResumos = numeroDeResumos;
-        this.resumos =  new String[numeroMaxDeResumos];
-        this.temasResumos =  new String[numeroMaxDeResumos];
+    public RegistroResumos(int numeroMaxDeResumos) {
+        resumos = new Resumos(numeroMaxDeResumos);
+        this.numeroMaxDeResumos = numeroMaxDeResumos;
     }
 
-    /**
-     * Verifica se é necessário substituir algum resumo e adiciona o tema e o conteúdo dos resumos em seus respectivos arrays.
-     * Utiliza uma variavel auxiliar que é zerada caso o número de resumos ultrapasse o limite.
-     * @param tema
-     * @param resumo
-     */
-    public void adiciona(String tema, String resumo) {
-        if (contaResumosAtivos <= numeroMaxDeResumos - 1) {
-            temasResumos[contaResumosAtivos] = tema;
-            resumos[contaResumosAtivos] = (tema + ": " + resumo);
-            contaResumosAtivos++;
-        } else {
-            if (auxiliaContaResumos > numeroMaxDeResumos - 1) {
-                auxiliaContaResumos = 0;
-            }
-            temasResumos[auxiliaContaResumos] = tema;
-            resumos[auxiliaContaResumos] = (tema + ": " + resumo);
-            auxiliaContaResumos++;
-        }
+    public void verificaResumos() {
+        posicaoUltimoResumo = (posicaoUltimoResumo <= numeroMaxDeResumos - 1 ? posicaoUltimoResumo : 0);
+        numResumosCadastrados = (numResumosCadastrados <= numeroMaxDeResumos - 1 ? ++numResumosCadastrados : numResumosCadastrados);
     }
 
-    /**
-     * Retorna todos os resumos cadastrados.
-     * @return Array resumos
-     */
+    public void adiciona(String titulo, String resumo) {
+        verificaResumos();
+        resumos.adicionaNovoResumo(posicaoUltimoResumo++, titulo, resumo);
+    }
+
     public String[] pegaResumos() {
-        return resumos;
+        return resumos.getResumos();
     }
 
-    /**
-     * Retorna uma stringa com a relação do número de resumos cadastrados.
-     * @return String "- contaResumosAtivos resumo(s) cadastrado(s)
-     */
-    public String numeroDeResumos() {
-        return "- " + contaResumosAtivos + " resumo(s) cadastrado(s)"+ "\n" + "- ";
+    public int conta() {
+        return this.numResumosCadastrados;
     }
-    /**
-     *Retorna uma string com o tema e o conteúdo do resumo além do número de resumos cadastrados.
-     * @return temaDoResumo : resumo
-     */
+
     public String imprimeResumos() {
-        String stringTemas = "";
-        stringTemas += numeroDeResumos();
-
-        for (int i = 0; i < contaResumosAtivos - 1; i++) {
-            if (i <= contaResumosAtivos) {
-                stringTemas += temasResumos[i] + " | ";
-            }
+        String[] tempTema = resumos.getTemasResumos();
+        String stringTemas = "- " + numResumosCadastrados + " resumo(s) cadastrado(s)\n- ";
+        for (int i = 0; i < numResumosCadastrados; i++) {
+            stringTemas += (i < numResumosCadastrados - 1 ? tempTema[i] + " | " : tempTema[i]);
         }
-        stringTemas += temasResumos[contaResumosAtivos - 1];
         return stringTemas;
     }
 
-    /**
-     * Retorna um int que representa o número de resumos cadastrados
-     * @return
-     */
-    public int conta() {
-        return contaResumosAtivos;
-    }
-
-    /**
-     * Verifica se determinado tema de resumo já foi cadastrado.
-     * @param tema
-     * @return boolean true ou false
-     */
     public boolean temResumo(String tema) {
-        return Arrays.asList(temasResumos).contains(tema);
+        return Arrays.asList(resumos.getTemasResumos()).contains(tema);
     }
 }
