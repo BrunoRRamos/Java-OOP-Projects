@@ -26,7 +26,7 @@ public class RegistroResumos {
      * Verifica se o número de resumos cadastrados exedeu o número máximo de resumos e caso tenha exedido zera o valor da variavel: posicaoUltimoResumo,
      * a fim de subistituir os primeiros resumos cadastrados por novos.
      */
-    public void verificaResumos() {
+    private void verificaResumos() {
         posicaoUltimoResumo = (posicaoUltimoResumo <= numeroMaxDeResumos - 1 ? posicaoUltimoResumo : 0);
         numResumosCadastrados = (numResumosCadastrados <= numeroMaxDeResumos - 1 ? ++numResumosCadastrados : numResumosCadastrados);
     }

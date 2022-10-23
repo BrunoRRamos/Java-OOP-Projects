@@ -59,8 +59,8 @@ public class Disciplina {
      * Calcula a média da disciplina.
      * @return mediaDaDisciplina
      */
-    public double calculaMedia() {
-        int somaNotas = 0;
+    private double calculaMedia() {
+        double somaNotas = 0;
         double media;
         for (double nota : notas) {
             somaNotas += nota;
